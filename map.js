@@ -4,36 +4,31 @@
  * command node map.js in the terminal
  */
 
-// Using a for loop
-
-
-// Using map()
-
-
-// Simplified w/ map()
-
-
-// Simplfied w/ map() + arrow function
-
-
-// With objects:
-const students = [
+ let students = [
   {
-    id: 1,
-    name: 'Mark',
-    profession: 'Developer',
-    skill: 'JavaScript'
+      name: 'John',
+      subjects: ['maths', 'english', 'cad'],
+      teacher: {maths: 'Harry', english: 'Joan', cad: 'Paul'},
+      results: {maths: 90, english: 75, cad: 87},
   },
   {
-    id: 2,
-    name: 'Ariel',
-    profession: 'Developer',
-    skill: 'HTML'
+      name: 'Emily',
+      subjects: ['science', 'english', 'art'],
+      teacher: {science: 'Iris', english: 'Joan', art: 'Simon'},
+      results: {science: 93, english: 80, art: 95},
   },
   {
-    id: 3,
-    name: 'Jason',
-    profession: 'Designer',
-    skill: 'CSS'
+      name: 'Adam',
+      subjects: ['science', 'maths', 'art'],
+      teacher: {science: 'Iris', maths: 'Harry', art: 'Simon'},
+      results: {science: 93, maths: 77, art: 95},
   },
+  {
+      name: 'Fran',
+      subjects: ['science', 'english', 'art'],
+      teacher: {science: 'Iris', english: 'Joan', art: 'Simon'},
+      results: {science: 93, english: 87, art: 95},
+  }
 ];
+
+let [john, ...rest] = students.map(student => [student.name, student.results]);
